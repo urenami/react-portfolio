@@ -1,0 +1,122 @@
+.home {
+    background-color: #1f2f44;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .home-header {
+    margin-bottom: 20px;
+  }
+  
+  .home-title {
+    font-size: 3em;
+    color: #4CAF50;
+    animation: fadeInDown 1.2s ease-in-out;
+  }
+  
+  .home-subtitle {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #777;
+  }
+  
+  .home-content {
+    margin: 30px 0;
+  }
+  
+  .home-footer {
+    margin-top: 40px;
+    font-size: 1em;
+    color: #555;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Styles for the Navbar */
+  .navbar {
+    background-color: #4CAF50;
+    padding: 20px 0; 
+    text-align: center;
+  }
+  
+
+.navbar-links {
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+.navbar-links li {
+  display: inline; 
+  margin: 0 20px; 
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease; 
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+  color: #ddd; 
+}
+
+@media (max-width: 600px) {
+  .navbar-links li {
+    display: block; 
+    margin: 10px 0; 
+  }
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333; 
+  color: white; 
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px; 
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+.social-media a {
+  margin: 0 15px;
+  color: #4CAF50; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #77dd77; 
+}
+
+.App {
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
