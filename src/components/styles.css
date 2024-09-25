@@ -1,13 +1,27 @@
 .home {
-  background-color: #1f2f44; 
+  background: linear-gradient(45deg, #1f2f44, #1f2f44, #4CAF50); 
+  background-size: 300% 300%;
+  animation: gradientAnimation 15s ease infinite; 
   text-align: center;
   font-family: 'Arial', sans-serif;
   color: #333;
-  margin: 11px auto; 
-  max-width: 800px; 
-  padding: 20px; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+  margin: 11px auto;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .home-header {
@@ -31,7 +45,7 @@
 }
 
 .home-footer {
-  margin-top: 20px; 
+  margin-top: 20px;
   font-size: 1em;
   color: #555;
 }
