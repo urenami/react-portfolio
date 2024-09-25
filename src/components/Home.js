@@ -1,5 +1,6 @@
 import React from 'react';
 import ThreeDModel from './ThreeDModel';
+import TypingEffect from './TypingEffect';
 import './styles.css'; 
 
 const Home = () => {
@@ -7,7 +8,7 @@ const Home = () => {
     <div className="home">
       <header className="home-header">
         <h1 className="home-title">Welcome to My Portfolio</h1>
-        <p className="home-subtitle">Explore my work and journey in tech</p>
+        <TypingEffect text="Explore my work and journey in tech" />
       </header>
       
       <section className="home-content">

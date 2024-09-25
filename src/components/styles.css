@@ -1,11 +1,13 @@
 .home {
-  background-color: #1f2f44;
+  background-color: #1f2f44; 
   text-align: center;
   font-family: 'Arial', sans-serif;
   color: #333;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 20px;
+  margin: 11px auto; 
+  max-width: 800px; 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .home-header {
@@ -29,7 +31,7 @@
 }
 
 .home-footer {
-  margin-top: 40px;
+  margin-top: 20px; 
   font-size: 1em;
   color: #555;
 }
@@ -110,7 +112,7 @@
   color: white;
   padding: 20px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 11px; 
 }
 
 .footer p {
@@ -139,4 +141,29 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.cta-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #45a049;
+  transform: translateY(-5px);
+}
+
+.cta-button:active {
+  transform: translateY(0);
 }
