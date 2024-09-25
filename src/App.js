@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import GetInTouch from './components/GetInTouch';
 import Navbar from "./components/navbar";
 
 function App() {
@@ -13,12 +14,13 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Projects" element={<Projects />} />
+          <Route path="/get-in-touch" element={<GetInTouch />} />
         </Routes>
 
         <footer className="footer">
-          <p>&copy; 2024 Mike's Portfolio. All rights reserved.</p>
+          <p>&copy; 2024 Michael's Portfolio. All rights reserved.</p>
           <div className="social-media">
             <a
               href="https://github.com"
