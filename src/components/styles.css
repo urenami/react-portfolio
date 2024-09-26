@@ -1,3 +1,6 @@
+/* Existing styles */
+
+/* Gradient Background for Home */
 .home {
   background: linear-gradient(45deg, #1f2f44, #1f2f44, #4CAF50); 
   background-size: 300% 300%;
@@ -180,4 +183,43 @@
 
 .cta-button:active {
   transform: translateY(0);
+}
+
+/* Typing Effect Container */
+.typing-container {
+  border: 2px solid #4CAF50; 
+  padding: 10px;
+  width: 400px; 
+  height: 50px;
+  margin: 20px auto; 
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 10px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Adjusted Typing Text Styling */
+.typing-text {
+  font-family: 'Arial', sans-serif; 
+  font-size: 1.5em; 
+  color: #4CAF50; /* Green text */
+  font-weight: bold;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-align: center;
+  animation: blink-caret 1s step-end infinite;
+}
+
+/* Blink caret effect */
+@keyframes blink-caret {
+  from, to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: #4CAF50;
+  }
 }

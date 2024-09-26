@@ -8,7 +8,7 @@ const Home = () => {
     <div className="home">
       <header className="home-header">
         <h1 className="home-title">Welcome to My Portfolio</h1>
-        <TypingEffect text="Explore my work and journey in tech" />
+        <TypingEffect />
       </header>
       
       <section className="home-content">
