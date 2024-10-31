@@ -1,225 +1,384 @@
-/* Existing styles */
-
 /* Gradient Background for Home */
 .home {
-  background: linear-gradient(45deg, #1f2f44, #1f2f44, #4CAF50); 
-  background-size: 300% 300%;
-  animation: gradientAnimation 15s ease infinite; 
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  margin: 11px auto;
-  max-width: 800px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  /* Sets a gradient background with animation */
+  background: linear-gradient(45deg, #1f2f44, #1f2f44, #4caf50); /* Gradient from dark blue to green */
+  background-size: 300% 300%; /* Allows for a smooth transition effect */
+  animation: gradientAnimation 15s ease infinite; /* Animation for background gradient */
+  text-align: center; /* Center-aligns text */
+  font-family: "Arial", sans-serif; /* Sets font family */
+  color: #333; /* Text color */
+  margin: 11px auto; /* Centers the component with auto margins */
+  max-width: 800px; /* Limits the maximum width */
+  padding: 20px; /* Adds padding inside the component */
+  border-radius: 10px; /* Rounds the corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
 }
 
 @keyframes gradientAnimation {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 50%; /* Starting position of the gradient */
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 50%; /* Middle position of the gradient */
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 50%; /* Returns to starting position */
   }
 }
 
 .home-header {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Adds space below the header */
 }
 
 .home-title {
-  font-size: 3em;
-  color: #4CAF50;
-  animation: fadeInDown 1.2s ease-in-out;
+  font-size: 3em; /* Large title font size */
+  color: #4caf50; /* Title color */
+  animation: fadeInDown 1.2s ease-in-out; /* Fade-in animation for the title */
 }
 
 .home-subtitle {
-  font-size: 1.5em;
-  margin-top: 10px;
-  color: #777;
+  font-size: 1.5em; /* Subtitle font size */
+  margin-top: 10px; /* Space above the subtitle */
+  color: #777; /* Subtitle color */
 }
 
 .home-content {
-  margin: 30px 0;
+  margin: 30px 0; /* Vertical space around the content */
 }
 
 .home-footer {
-  margin-top: 20px;
-  font-size: 1em;
-  color: #555;
+  margin-top: 20px; /* Space above the footer */
+  font-size: 1em; /* Footer font size */
+  color: #555; /* Footer color */
 }
 
 @keyframes fadeInDown {
   from {
-    opacity: 0;
-    transform: translateY(-20px);
+    opacity: 0; /* Starts transparent */
+    transform: translateY(-20px); /* Moves up */
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Resets position */
   }
 }
 
 /* Styles for the Navbar */
 .navbar {
-  background-color: #4CAF50;
-  padding: 20px 0;
-  text-align: center;
-  position: relative;
+  background-color: #4caf50; /* Navbar background color */
+  padding: 20px 0; /* Vertical padding */
+  text-align: center; /* Center-aligns navbar items */
+  position: relative; /* Allows absolute positioning of child elements */
 }
 
 /* Logo positioning */
 .logo-container {
-  position: absolute;
-  top: 5px;
-  left: 20px;
+  position: absolute; /* Allows free positioning within the navbar */
+  top: 5px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
 }
 
 .logo {
-  height: 100px; 
-  width: 100px;
-  opacity: 0.5; 
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  mix-blend-mode: lighten; 
-  border-radius: 50%;
+  height: 100px; /* Logo height */
+  width: 100px; /* Logo width */
+  opacity: 0.5; /* Logo transparency */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions for hover effect */
+  mix-blend-mode: lighten; /* Blends logo color with background */
+  border-radius: 50%; /* Makes logo circular */
 }
 
 .logo:hover {
-  opacity: 1; 
-  transform: scale(1.1); 
+  opacity: 1; /* Fully opaque on hover */
+  transform: scale(1.1); /* Slightly enlarges the logo */
 }
 
 .navbar-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none; /* Removes default list styling */
+  padding: 0; /* No padding */
+  margin: 0; /* No margin */
 }
 
 .navbar-links li {
-  display: inline;
-  margin: 0 20px;
+  display: inline; /* Displays links in a horizontal line */
+  margin: 0 20px; /* Space between links */
 }
 
 .navbar-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  text-decoration: none; /* No underline */
+  color: white; /* Link color */
+  font-weight: bold; /* Bold font for links */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .navbar-links a:hover {
-  text-decoration: underline;
-  color: #ddd;
+  text-decoration: underline; /* Underline links on hover */
+  color: #ddd; /* Light color on hover */
 }
 
 @media (max-width: 600px) {
   .navbar-links li {
-    display: block;
-    margin: 10px 0;
+    display: block; /* Stack links vertically on small screens */
+    margin: 10px 0; /* Vertical space between links */
   }
 }
 
 /* Footer styles */
 .footer {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  margin-top: 11px; 
+  background-color: #333; /* Footer background color */
+  color: white; /* Footer text color */
+  padding: 20px; /* Padding inside the footer */
+  text-align: center; /* Center-aligns footer text */
+  margin-top: 11px; /* Space above the footer */
 }
 
 .footer p {
-  margin: 0;
-  font-size: 1em;
+  margin: 0; /* No margin for footer paragraphs */
+  font-size: 1em; /* Footer paragraph font size */
 }
 
 .social-media {
-  margin-top: 10px;
+  margin-top: 10px; /* Space above social media links */
 }
 
 .social-media a {
-  margin: 0 15px;
-  color: #4CAF50;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  margin: 0 15px; /* Space between social media links */
+  color: #4caf50; /* Color for social media links */
+  text-decoration: none; /* No underline */
+  font-weight: bold; /* Bold font for links */
+  transition: color 0.3s ease; /* Smooth color change on hover */
 }
 
 .social-media a:hover {
-  color: #77dd77;
+  color: #77dd77; /* Lighter green on hover */
 }
 
 .App {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  min-height: 100vh; /* Full viewport height */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Vertical layout */
+  justify-content: space-between; /* Space between child elements */
 }
 
 .cta-buttons {
-  margin-top: 20px;
+  margin-top: 20px; /* Space above call-to-action buttons */
 }
 
 .cta-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  cursor: pointer;
-  border-radius: 5px;
-  margin: 0 10px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #4caf50; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 1.2em; /* Button font size */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  border-radius: 5px; /* Rounded corners */
+  margin: 0 10px; /* Space between buttons */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background and transform transitions */
 }
 
 .cta-button:hover {
-  background-color: #45a049;
-  transform: translateY(-5px);
+  background-color: #45a049; /* Darker green on hover */
+  transform: translateY(-5px); /* Slightly raises the button */
 }
 
 .cta-button:active {
-  transform: translateY(0);
+  transform: translateY(0); /* Resets position on click */
 }
 
 /* Typing Effect Container */
 .typing-container {
-  border: 2px solid #4CAF50; 
-  padding: 10px;
-  width: 400px; 
-  height: 50px;
-  margin: 20px auto; 
-  background-color: rgba(255, 255, 255, 0.1); 
-  border-radius: 10px; 
-  white-space: nowrap; 
-  overflow: hidden; 
-  text-overflow: ellipsis; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 2px solid #4caf50; /* Green border around the container */
+  padding: 10px; /* Padding inside the container */
+  width: 400px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  margin: 20px auto; /* Centers the container with auto margins */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  overflow: hidden; /* Hides overflow content */
+  color: #fff; /* White text for dark backgrounds */
+  font-family: "Courier New", monospace; /* Monospace font for typing effect */
 }
 
-/* Adjusted Typing Text Styling */
 .typing-text {
-  font-family: 'Arial', sans-serif; 
-  font-size: 1.5em; 
-  color: #4CAF50; /* Green text */
-  font-weight: bold;
-  white-space: nowrap; 
-  overflow: hidden;
-  text-align: center;
-  animation: blink-caret 1s step-end infinite;
+  font-family: "Arial", sans-serif; /* Sets font family */
+  font-size: 1.5em; /* Font size for typing text */
+  color: #4caf50; /* Green color for typing text */
+  font-weight: bold; /* Bold font for typing text */
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden; /* Hides overflow text */
+  text-align: center; /* Center-aligns text */
+  animation: blink-caret 1s step-end infinite; /* Animation for blinking cursor */
 }
 
-/* Blink caret effect */
 @keyframes blink-caret {
-  from, to {
-    border-right-color: transparent;
+  from,
+  to {
+    border-right-color: transparent; /* Invisible cursor */
   }
   50% {
-    border-right-color: #4CAF50;
+    border-right-color: #4caf50; /* Visible cursor in green */
   }
+}
+
+.accordion-item {
+  margin: 10px 0; /* Vertical space between accordion items */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: box-shadow 0.3s; /* Smooth shadow transition */
+}
+
+.accordion-item.expanded {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Darker shadow when expanded */
+}
+
+/* Accordion Title Styles */
+.accordion-title {
+  background-color: #f9f9f9; /* Light background color for the accordion title */
+  color: #444; /* Dark text color for visibility */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  padding: 18px; /* Padding for spacing within the title */
+  width: 100%; /* Full width of the parent container */
+  text-align: left; /* Left align text */
+  border: none; /* Remove default border */
+  outline: none; /* Remove default outline */
+  transition: background-color 0.4s, color 0.4s; /* Smooth transition for background and text color on hover */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space items evenly with space between */
+  align-items: center; /* Center items vertically */
+}
+
+/* Accordion Title Hover Effect */
+.accordion-title:hover {
+  background-color: #e0e0e0; /* Change background color on hover */
+  color: #333; /* Darken text color on hover for better contrast */
+}
+
+/* Span Element Transition */
+.accordion-title span {
+  transition: transform 0.3s ease; /* Smooth rotation transition for the span element */
+}
+
+/* Expanded Accordion Title Rotation */
+.accordion-item.expanded .accordion-title span {
+  transform: rotate(180deg); /* Rotate the span when the accordion is expanded */
+}
+
+/* Accordion Content Styles */
+.accordion-content {
+  max-height: 0; /* Initially hide content by setting max height to 0 */
+  overflow: hidden; /* Hide overflow content */
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Smooth transition for expanding/collapsing */
+  padding: 0 18px; /* Padding for content area */
+}
+
+/* Expanded Accordion Content Visibility */
+.accordion-item.expanded .accordion-content {
+  max-height: 500px; /* Set a max height when expanded, adjust based on content */
+  padding: 18px; /* Add padding when expanded */
+}
+
+/* About Section Styles */
+.about {
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  margin-top: 40px; /* Top margin for spacing */
+  padding: 40px; /* Padding for inner spacing */
+  text-align: center; /* Center text alignment */
+  background-color: #f9f9f9; /* Light background color for the section */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Headings within About Section */
+.about h2,
+.about h3 {
+  text-align: center; /* Center align headings */
+  margin-top: 20px; /* Top margin for spacing */
+  color: #2c3e50; /* Dark color for headings */
+  font-family: "Roboto", "Arial", sans-serif; /* Font family for headings */
+}
+
+/* Styles for Bio, Achievements, and Skills Sections */
+.bio-section,
+.achievements,
+.skills {
+  padding: 20px; /* Padding for inner spacing */
+  border-radius: 5px; /* Rounded corners */
+  margin: 10px 0; /* Vertical margin for spacing between sections */
+  font-family: "Georgia", "Times New Roman", serif; /* Font family for readability */
+  line-height: 1.6; /* Line height for better text readability */
+}
+
+/* Bio Section Styles */
+.bio-section {
+  background-color: #1f2f44; /* Dark background color for bio section */
+  color: #f1f1f1; /* Light text color for contrast */
+}
+
+/* Achievements Section Styles */
+.achievements {
+  background-color: #4caf50; /* Green background for achievements section */
+  color: #000; /* Black text for visibility */
+  /* Add these properties to ensure content visibility */
+  overflow-y: auto; /* Allows vertical scrolling if content overflows */
+  max-height: 600px; /* Set a maximum height, adjust as needed for your content */
+}
+
+/* Skills Section Styles */
+.skills {
+  background-color: #37474f; /* Dark grey background for skills section */
+  color: #eceff1; /* Light text color for contrast */
+}
+
+/* Skills List Styles */
+.skills-list {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center list items */
+  flex-wrap: wrap; /* Wrap items to next line if necessary */
+  gap: 16px; /* Spacing between items */
+  border: 1px solid #9e9e9e; /* Border around the list */
+  border-radius: 5px; /* Rounded corners for the list */
+  padding: 10px; /* Inner padding for the list */
+  background-color: #fbfbfb; /* Light background color for visibility */
+  font-family: "Arial", sans-serif; /* Font family for list items */
+}
+
+/* Skill Item Image Styles */
+.skill-item img {
+  width: 60px; /* Fixed width for skill images */
+  height: 60px; /* Fixed height for skill images */
+  border-radius: 50%; /* Circular shape for images */
+  transition: transform 0.2s; /* Smooth transition for scaling effect */
+}
+
+/* Skill Item Image Hover Effect */
+.skill-item img:hover {
+  transform: scale(1.1); /* Slightly scale image on hover for effect */
+}
+
+/* Heading Styles for Bio, Achievements, and Skills */
+.bio-section h3,
+.achievements h3,
+.skills h3 {
+  font-family: "Merriweather", "Georgia", serif; /* Font family for headings */
+  color: #005b96; /* Color for headings */
+  font-weight: bold; /* Bold text for emphasis */
+  margin-bottom: 15px; /* Bottom margin for spacing */
+}
+
+/* Skills List Item Styles */
+.skills-list li {
+  font-family: "Arial", sans-serif; /* Font family for list items */
+  color: #e0e0e0; /* Light color for text visibility */
+  font-size: 14px; /* Font size for list items */
+}
+
+/* Skill Item Text Styles */
+.skill-item {
+  font-family: "Arial", sans-serif; /* Font family for skill item text */
+  color: #333; /* Dark text color for contrast */
 }
