@@ -4,7 +4,7 @@ import React, { useState } from "react";
 // Renders a single accordion item that expands/collapses to show/hide content
 const AccordionItem = ({ title, content }) => {
   // State to manage the expanded/collapsed state of the accordion item
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div
