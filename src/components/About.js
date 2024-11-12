@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./CSS/About.css";
 
 // Accordion Item Component
 // Renders a single accordion item that expands/collapses to show/hide content
@@ -96,10 +97,13 @@ const About = () => {
 
   // Skills data to display in the Skills section, each skill with an image and a name
   const skills = [
-    { name: "HTML", image: "/images/html.png" },
-    { name: "CSS", image: "/images/css.png" },
-    { name: "JavaScript", image: "/images/javascript.png" },
-    { name: "React", image: "/images/react.png" },
+    { name: "HTML", image: "/img/html.png" },
+    { name: "CSS", image: "/img/css.png" },
+    { name: "JavaScript", image: "/img/js.png" },
+    { name: "React", image: "/img/react.png" },
+    { name: "API", image: "/img/api.png" },
+    { name: "AWS", image: "/img/aws.png" },
+    { name: "NODE", image: "/img/node.png" },
     // Additional skills and images can be added here
   ];
 
@@ -118,7 +122,7 @@ const About = () => {
         {/* Profile Section with an optional image */}
         <div className="profile-section">
           <img
-            src="image.jpg"
+            src="./img/IMG_2019.jpg"
             alt="Your Name"
             className="about-image"
           />
