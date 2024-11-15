@@ -1,61 +1,61 @@
 import React, { useState } from "react";
-import "./CSS/About.css";
+import "./CSS/About.css"; // Importing the associated CSS file for styling
 
 // Accordion Item Component
-// Renders a single accordion item that expands/collapses to show/hide content
+// This component represents a single accordion item that can expand/collapse to show content
 const AccordionItem = ({ title, content }) => {
-  // State to manage the expanded/collapsed state of the accordion item
+  // State to track whether the accordion item is expanded or collapsed
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div
-      // Applies 'expanded' class if the item is open, which can be used to style expanded items
-      className={`accordion-item ${isExpanded ? "expanded" : ""}`}
+      // Applies 'expanded' class if the item is open; useful for styling purposes
+      className={`accordion-item ${isExpanded ? "expanded" : ""}`} // Fixing the className syntax
       style={{
         marginBottom: "16px",
-        border: "1px solid #ccc",
-        borderRadius: "5px",
-        overflow: "hidden",
+        border: "1px solid #ccc", // Light border around each accordion item
+        borderRadius: "5px", // Rounded corners
+        overflow: "hidden", // Hide content that exceeds the container size when collapsed
       }}
     >
-      {/* Accordion title section, which is clickable to toggle the expanded state */}
+      {/* Accordion title button that toggles the expansion */}
       <button
-        onClick={() => setIsExpanded(!isExpanded)}
+        onClick={() => setIsExpanded(!isExpanded)} // Toggle the expansion state
         className="accordion-title"
         style={{
-          backgroundColor: "#f9f9f9",
-          padding: "10px",
-          border: "none",
-          width: "100%",
-          textAlign: "left",
-          cursor: "pointer",
+          backgroundColor: "#f9f9f9", // Light background color
+          padding: "10px", // Padding for spacing around the text
+          border: "none", // No border for the button
+          width: "100%", // Button takes up full width
+          textAlign: "left", // Align text to the left
+          cursor: "pointer", // Pointer cursor when hovering over the button
         }}
       >
         {title}
-        {/* Shows either '-' or '+' depending on whether the item is expanded or not */}
+        {/* Shows either '-' or '+' to indicate if the item is expanded or collapsed */}
         <span style={{ float: "right" }}>{isExpanded ? "-" : "+"}</span>
       </button>
 
-      {/* Accordion content section, only visible when the item is expanded */}
+      {/* Accordion content that is visible only when expanded */}
       <div
         className="accordion-content"
         style={{
-          maxHeight: isExpanded ? "1000px" : "0",
-          transition: "max-height 0.3s ease-out",
-          overflow: "hidden",
-          padding: "10px",
+          maxHeight: isExpanded ? "1000px" : "0", // Expand the content when the item is open
+          transition: "max-height 0.3s ease-out", // Smooth transition for opening and closing
+          overflow: "hidden", // Hide any content that overflows when collapsed
+          padding: "10px", // Padding inside the content area
         }}
       >
-        {content}
+        {content} {/* Display the content passed as a prop */}
       </div>
     </div>
   );
 };
 
 // Main About Component
-// Represents the About section of the website
+// Represents the About section of the webpage
 const About = () => {
-  // Achievements data, each with a title and content, which can be displayed in AccordionItems
+  // Array of achievements, each with a title and detailed content to be displayed in AccordionItems
   const achievements = [
     {
       title: "Certification in Full Stack Development",
@@ -66,7 +66,7 @@ const About = () => {
             [Bootcamp Name], demonstrating my comprehensive understanding of web
             development from front-end to back-end technologies.
           </p>
-          {/* Lists of specific technologies and tools learned */}
+          {/* Lists of specific front-end technologies learned */}
           <h4>Front-End Technologies:</h4>
           <ul>
             <li><strong>HTML5 & CSS3:</strong> Expertise in creating structured and visually appealing web pages.</li>
@@ -95,7 +95,7 @@ const About = () => {
     // Additional achievements can be added here
   ];
 
-  // Skills data to display in the Skills section, each skill with an image and a name
+  // Skills data, each skill includes a name and an associated image
   const skills = [
     { name: "HTML", image: "/img/html.png" },
     { name: "CSS", image: "/img/css.png" },
@@ -109,7 +109,7 @@ const About = () => {
 
   return (
     <div className="about">
-      {/* Header Section with the main title and typing effect for the About section */}
+      {/* Header Section */}
       <div className="about-header">
         <h1>About Me</h1>
         <div className="typing-container">
@@ -119,16 +119,16 @@ const About = () => {
 
       {/* Main Content Section */}
       <div className="about-content">
-        {/* Profile Section with an optional image */}
+        {/* Profile Section - Optional image */}
         <div className="profile-section">
           <img
-            src="./img/IMG_2019.jpg"
-            alt="Your Name"
+            src="./img/IMG_2019.jpg" // Profile image path
+            alt="Your Name" // Image alt text
             className="about-image"
           />
         </div>
 
-        {/* Bio Section - Introduction and story about the user's background */}
+        {/* Bio Section - Description of the user's background */}
         <div className="bio-section">
           <h2>My Story</h2>
           <p>
@@ -153,14 +153,14 @@ const About = () => {
           </p>
         </div>
 
-        {/* Achievements Section - Renders AccordionItems for each achievement */}
+        {/* Achievements Section - Displays all achievements in AccordionItems */}
         <div
           className="achievements"
           style={{
-            maxHeight: "60vh",
-            overflowY: "auto",
+            maxHeight: "60vh", // Limit the height of the achievements section
+            overflowY: "auto", // Enable scrolling if content exceeds the height
             padding: "10px",
-            border: "1px solid #ccc",
+            border: "1px solid #ccc", // Border around the section
             borderRadius: "5px",
           }}
         >
@@ -178,7 +178,7 @@ const About = () => {
           )}
         </div>
 
-        {/* Skills Section - Displays skill items with images and names */}
+        {/* Skills Section - Displays the list of skills */}
         <div className="skills">
           <h2>Skills & Tools</h2>
           <div
@@ -187,23 +187,25 @@ const About = () => {
               display: "flex",
               justifyContent: "center",
               flexWrap: "wrap",
-              gap: "16px",
+              gap: "16px", // Space between each skill item
             }}
           >
             {skills.map((skill, index) => (
-              <div
-                className="skill-item"
-                key={index}
-                style={{ textAlign: "center" }}
-              >
-                <img
-                  src={skill.image}
-                  alt={skill.name}
-                  style={{ width: "60px", height: "60px" }}
-                />
-                <p>{skill.name}</p>
-              </div>
-            ))}
+  <div
+    className="skill-item"
+    key={index}
+    style={{ textAlign: "center" }} // Align each skill item text to center
+  >
+    <img
+      src={skill.image} // Image path for the skill icon
+      alt={skill.name} // Alt text for the image
+      style={{ width: "60px", height: "60px" }} // Size of each skill icon
+    />
+    {/* Add the 'skill-name' class to the paragraph */}
+    <p className="skill-name">{skill.name}</p> {/* Skill name text */}
+  </div>
+))}
+
           </div>
         </div>
       </div>
@@ -211,4 +213,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default About; // Export the About component for use in other parts of the app

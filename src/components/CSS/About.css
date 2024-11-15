@@ -1,183 +1,172 @@
+/* Global text color for the entire document */
+body {
+  color: black; /* Ensures all text has a black font color */
+}
+
+/* Styles for each accordion item */
 .accordion-item {
-  margin: 10px 0; /* Vertical space between accordion items */
-  border: 1px solid #ddd; /* Light gray border */
-  border-radius: 4px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-  transition: box-shadow 0.3s; /* Smooth shadow transition */
+  margin: 10px 0; /* Adds vertical space between accordion items */
+  border: 1px solid #ddd; /* Sets a light gray border around each item */
+  border-radius: 4px; /* Rounds the corners of the accordion items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a 3D effect */
+  transition: box-shadow 0.3s; /* Smoothly transitions shadow on hover or expansion */
 }
 
+/* Styles for expanded accordion items */
 .accordion-item.expanded {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Darker shadow when expanded */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increases shadow intensity when expanded */
 }
 
-/* Accordion Title Styles */
+/* Accordion title styles */
 .accordion-title {
-  background-color: #f9f9f9; /* Light background color for the accordion title */
-  color: #444; /* Dark text color for visibility */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  padding: 18px; /* Padding for spacing within the title */
-  width: 100%; /* Full width of the parent container */
-  text-align: left; /* Left align text */
-  border: none; /* Remove default border */
-  outline: none; /* Remove default outline */
-  transition: background-color 0.4s, color 0.4s; /* Smooth transition for background and text color on hover */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space items evenly with space between */
-  align-items: center; /* Center items vertically */
+  background-color: #f9f9f9; /* Light background color for title bar */
+  color: black; /* Sets the text color for the accordion title to black */
+  cursor: pointer; /* Changes cursor to pointer to indicate interactivity */
+  padding: 18px; /* Adds inner spacing for better touch target size */
+  width: 100%; /* Makes the title bar full width */
+  text-align: left; /* Aligns text to the left */
+  border: none; /* Removes any default border */
+  outline: none; /* Removes focus outline */
+  transition: background-color 0.4s, color 0.4s; /* Smooth transition for hover effects */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: space-between; /* Spaces elements evenly with space between */
+  align-items: center; /* Aligns content vertically in the center */
 }
 
-/* Accordion Title Hover Effect */
+/* Hover effect for accordion title */
 .accordion-title:hover {
-  background-color: #e0e0e0; /* Change background color on hover */
-  color: #333; /* Darken text color on hover for better contrast */
+  background-color: #e0e0e0; /* Changes background color on hover */
+  color: #333; /* Darkens text color on hover */
 }
 
-/* Span Element Transition */
+/* Transition for the span element within the title */
 .accordion-title span {
-  transition: transform 0.3s ease; /* Smooth rotation transition for the span element */
+  transition: transform 0.3s ease; /* Smoothly rotates the span icon */
 }
 
-/* Expanded Accordion Title Rotation */
+/* Rotates the span element when the accordion is expanded */
 .accordion-item.expanded .accordion-title span {
-  transform: rotate(180deg); /* Rotate the span when the accordion is expanded */
+  transform: rotate(180deg); /* Rotates span 180 degrees when expanded */
 }
 
-/* Accordion Content Styles */
+/* Styles for accordion content */
 .accordion-content {
-  max-height: 0; /* Initially hide content by setting max height to 0 */
-  overflow: hidden; /* Hide overflow content */
-  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Smooth transition for expanding/collapsing */
-  padding: 0 18px; /* Padding for content area */
+  max-height: 0; /* Collapses the content by default */
+  overflow: hidden; /* Hides overflowing content */
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Smooth transition for expanding */
+  padding: 0 18px; /* Horizontal padding for content */
 }
 
-/* Expanded Accordion Content Visibility */
+/* Expanded accordion content */
 .accordion-item.expanded .accordion-content {
-  max-height: 500px; /* Set a max height when expanded, adjust based on content */
-  padding: 18px; /* Add padding when expanded */
+  max-height: 500px; /* Expands content to a maximum height */
+  padding: 18px; /* Adds padding when content is expanded */
 }
 
+/* About section styles */
 .about {
-  display: flex; /* Use flexbox layout */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  margin: 60px auto; /* Top margin for spacing and auto left/right margin for centering */
-  padding: 40px; /* Padding for inner spacing */
-  text-align: center; /* Center text alignment */
-  background-color: #e6e5e5
-
-  ; /* Light background color for the section */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  width: 1100px; /* Set your desired width here */
+  display: flex; /* Uses flexbox layout */
+  flex-direction: column; /* Stacks child elements vertically */
+  align-items: center; /* Centers elements horizontally */
+  margin: 60px auto; /* Centers the section and adds top margin */
+  padding: 40px; /* Adds spacing inside the section */
+  text-align: center; /* Centers text */
+  background-color: #e6e5e5; /* Light background color */
+  border-radius: 10px; /* Rounds the corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  width: 1100px; /* Sets a fixed width for the section */
 }
 
-/* Headings within About Section */
+/* Heading styles for the about section */
 .about h2,
 .about h3 {
-  text-align: center; /* Center align headings */
-  margin-top: 20px; /* Top margin for spacing */
-  color: #2c3e50; /* Dark color for headings */
-  font-family: "Roboto", "Arial", sans-serif; /* Font family for headings */
+  text-align: center; /* Centers the headings */
+  margin-top: 20px; /* Adds spacing above the headings */
+  color: black; /* Ensures headings have black font color */
+  font-family: "Roboto", "Arial", sans-serif; /* Sets font family */
 }
 
-/* Styles for Bio, Achievements, and Skills Sections */
+/* Styles for specific sections within About */
 .bio-section,
 .achievements,
 .skills {
-  padding: 20px; /* Padding for inner spacing */
-  border-radius: 5px; /* Rounded corners */
-  margin: 10px 0; /* Vertical margin for spacing between sections */
-  font-family: "Georgia", "Times New Roman", serif; /* Font family for readability */
-  line-height: 1.6; /* Line height for better text readability */
+  padding: 20px; /* Adds spacing inside each section */
+  border-radius: 5px; /* Rounds the corners */
+  margin: 10px 0; /* Adds vertical spacing between sections */
+  font-family: "Georgia", "Times New Roman", serif; /* Classic font family for readability */
+  line-height: 1.6; /* Improves text readability */
 }
 
-/* Bio Section Styles */
+/* Bio section-specific styles */
 .bio-section {
-  background-color: #1f2f44; /* Dark background color for bio section */
-  color: #f1f1f1; /* Light text color for contrast */
+  background-color: #1f2f44; /* Dark background */
+  color: #f1f1f1; /* Light text for contrast */
 }
 
-/* Achievements Section Styles */
+/* Achievements section-specific styles */
 .achievements {
-  background-color: #4caf50; /* Green background for achievements section */
-  color: #000; /* Black text for visibility */
-  overflow-y: auto; /* Allows vertical scrolling if content overflows */
-  max-height: 600px; /* Set a maximum height, adjust as needed for your content */
+  background-color: #4caf50; /* Green background */
+  color: black; /* Ensures text in achievements is black */
+  overflow-y: auto; /* Adds vertical scrolling if content overflows */
+  max-height: 600px; /* Sets a maximum height */
 }
 
-/* Skills Section Styles */
+/* Skills section-specific styles */
 .skills {
-  background-color: #37474f; /* Dark grey background for skills section */
-  color: #eceff1; /* Light text color for contrast */
+  background-color: #37474f; /* Dark gray background */
+  color: #eceff1; /* Light text for contrast */
 }
 
-/* Skills List Styles */
+/* Skills list layout */
 .skills-list {
-  display: flex; /* Use flexbox layout */
-  justify-content: center; /* Center list items */
-  flex-wrap: wrap; /* Wrap items to next line if necessary */
-  gap: 16px; /* Spacing between items */
-  /* Removed the border from the list */
-  border-radius: 5px; /* Rounded corners for the list */
-  padding: 10px; /* Inner padding for the list */
-  background-color: #fbfbfb; /* Light background color for visibility */
-  font-family: "Arial", sans-serif; /* Font family for list items */
-  /* Manual sizing (adjust these values as needed) */
-  max-width: 800px; /* Adjust max-width for the list */
-  margin: 0 auto; /* Center the list within the parent container */
+  display: flex; /* Uses flexbox */
+  justify-content: center; /* Centers the list items */
+  flex-wrap: wrap; /* Wraps items to next line if needed */
+  gap: 16px; /* Adds spacing between items */
+  padding: 10px; /* Adds spacing inside the list */
+  background-color: #fbfbfb; /* Light background */
 }
 
-/* Skill Item Image Styles */
+/* Skill item image styles */
 .skill-item img {
-  width: 60px; /* Fixed width for skill images */
-  height: 60px; /* Fixed height for skill images */
-  border-radius: 50%; /* Circular shape for images */
-  transition: transform 0.2s; /* Smooth transition for scaling effect */
+  width: 60px; /* Sets fixed width */
+  height: 60px; /* Sets fixed height */
+  border-radius: 50%; /* Makes images circular */
+  transition: transform 0.2s; /* Adds hover effect */
 }
 
-/* Skill Item Image Hover Effect */
+/* Skill item hover effect */
 .skill-item img:hover {
-  transform: scale(1.1); /* Slightly scale image on hover for effect */
+  transform: scale(1.1); /* Scales up image slightly on hover */
 }
 
-/* Heading Styles for Bio, Achievements, and Skills */
-.bio-section h3,
-.achievements h3,
-.skills h3 {
-  font-family: "Merriweather", "Georgia", serif; /* Font family for headings */
-  color: #005b96; /* Color for headings */
-  font-weight: bold; /* Bold text for emphasis */
-  margin-bottom: 15px; /* Bottom margin for spacing */
-}
-
-/* Skills List Item Styles */
-.skills-list li {
-  font-family: "Arial", sans-serif; /* Font family for list items */
-  color: #e0e0e0; /* Light color for text visibility */
-  font-size: 14px; /* Font size for list items */
-}
-
-/* Skill Item Text Styles */
-.skill-item {
-  font-family: "Arial", sans-serif; /* Font family for skill item text */
-  color: #333; /* Dark text color for contrast */
-}
-
+/* Profile section for circular image */
 .profile-section {
   position: relative;
   display: inline-block;
-  width: 200px; /* Adjust size as needed */
-  height: 200px; /* Adjust size as needed */
-  overflow: hidden;
-  border-radius: 50%; /* Makes the image circular */
-  background: linear-gradient(135deg, #a0c4ff, #bdb2ff); /* Background gradient for blend effect */
+  width: 200px; /* Adjusts size */
+  height: 200px; /* Adjusts size */
+  overflow: hidden; /* Ensures content stays within circle */
+  border-radius: 50%; /* Makes it circular */
+  background: linear-gradient(135deg, #a0c4ff, #bdb2ff); /* Gradient background */
 }
 
+/* Image within profile section */
 .about-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the entire circle */
-  opacity: 0.95; /* Slight transparency for blending */
+  width: 100%; /* Fills the container width */
+  height: 100%; /* Fills the container height */
+  object-fit: cover; /* Ensures image covers circle */
+  opacity: 0.95; /* Slight transparency */
   mix-blend-mode: multiply; /* Blends image with background */
-  border-radius: 50%; /* Keeps image circular */
+  border-radius: 50%; /* Keeps it circular */
+}
+
+/* font style for skill names */
+.skill-name {
+  font-family: 'Arial', sans-serif; /* Optional: You can change the font if needed */
+  font-size: 14px; /* Optional: Adjust size if needed */
+  font-weight: bold; /* Optional: Make the text bold */
+  color: black; /* Set the text color to black */
+  text-align: center; /* Ensure the text is centered */
+  margin-top: 8px; /* Optional: Space between the image and text */
 }
