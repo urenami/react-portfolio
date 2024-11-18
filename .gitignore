@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Ignore IMG_2029.jpg in the img folder
+public/img/IMG_2029.jpg

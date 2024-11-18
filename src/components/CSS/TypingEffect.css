@@ -1,0 +1,26 @@
+/* Container for Typing Effect */
+.typing-container {
+  border: 2px solid #4CAF50; /* Green border to visually frame the container */
+  padding: 10px; /* Space inside the border for content */
+  width: 400px; /* Fixed width for the container */
+  height: 50px; /* Fixed height for uniform appearance */
+  margin: 0 auto; /* Centers the container horizontally */
+  background-color: rgba(255, 255, 255, 0.1); /* Light transparent background for subtle contrast */
+  border-radius: 10px; /* Rounded corners for a softer appearance */
+  display: flex; /* Flexbox layout for alignment */
+  justify-content: center; /* Centers content horizontally within the container */
+  align-items: center; /* Centers content vertically within the container */
+  text-overflow: ellipsis; /* Handles overflowing text with an ellipsis if needed */
+  white-space: nowrap; /* Prevents text from wrapping to a new line */
+  overflow: hidden; /* Hides overflowing content beyond the container boundaries */
+}
+
+/* Typing Text Styles */
+.typing-text {
+  font-family: 'Arial', sans-serif; /* Simple, clean font for readability */
+  font-size: 1.2em; /* Slightly larger font size for emphasis */
+  color: #4CAF50; /* Green color for the text, consistent with the border */
+  white-space: nowrap; /* Prevents text from wrapping, ensuring a single-line effect */
+  overflow: hidden; /* Hides any content exceeding the container's boundaries */
+  text-align: center; /* Centers the text horizontally within its container */
+}
