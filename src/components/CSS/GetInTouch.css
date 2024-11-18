@@ -1,0 +1,73 @@
+.contact-form {
+    max-width: 600px; /* Set the max-width to make it bigger than the input field */
+    margin: 50px auto; /* Center the form in the middle of the page */
+    padding: 30px; /* Add padding to create space inside the container */
+    background-color: #1f2f44; /* Green background for the form */
+    color: white; /* White text to contrast with the green background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
+  }
+  
+  .contact-form h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: white; /* White heading text to match the form */
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Space between form fields */
+  }
+  
+  .form-group label {
+    display: block; /* Make labels block elements */
+    font-weight: bold; /* Bold text for labels */
+    margin-bottom: 8px; /* Space between the label and input field */
+    color: white; /* White color for the labels */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%; /* Make the input fields stretch to full width */
+    padding: 10px; /* Add padding inside the fields */
+    border: 1px solid #ccc; /* Light border around input fields */
+    border-radius: 4px; /* Rounded corners for input fields */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+  }
+  
+  textarea {
+    min-height: 150px; /* Set a minimum height for the textarea */
+  }
+  
+  button {
+    width: 100%; /* Make the button stretch across the form */
+    padding: 12px; /* Add padding inside the button */
+    background-color: #4caf50; /* Dark blue color for the button */
+    color: white; /* White text on the button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Set a legible font size */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  button:hover {
+    background-color: #37474f; /* Darker blue on hover */
+  }
+  
+  .note-message {
+    background-color: #e6e5e5; /* Light gray background for the note */
+    color: black; /* Black text for readability */
+    padding: 15px; /* Padding inside the note message */
+    border-radius: 5px; /* Rounded corners for the note */
+    margin-bottom: 20px; /* Space between the note and form */
+    font-size: 16px; /* Font size for the note */
+    text-align: center; /* Centered text in the note */
+    border: 1px solid #ddd; /* Light gray border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow to make the note stand out */
+  }
+  
+  .note-message p {
+    margin: 0; /* Remove default margin */
+    font-weight: bold; /* Bold font for the note message */
+  }
+  

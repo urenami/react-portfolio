@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
-import GetInTouch from './components/GetInTouch';
+import GetInTouch from "./components/GetInTouch";
 import Navbar from "./components/navbar";
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/get-in-touch" element={<GetInTouch />} />
         </Routes>
 
@@ -36,7 +36,6 @@ function App() {
             >
               LinkedIn
             </a>
-            <a href="mailto:mike@example.com">Contact</a>
           </div>
         </footer>
       </div>
