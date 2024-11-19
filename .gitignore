@@ -24,3 +24,5 @@ yarn-error.log*
 
 # Ignore IMG_2029.jpg in the img folder
 public/img/IMG_2029.jpg
+public/logo192.png
+public/logo512.png
