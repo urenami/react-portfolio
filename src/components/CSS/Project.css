@@ -1,0 +1,107 @@
+/* Projects Container */
+.projects-container {
+    display: grid; /* Use a grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust the number of columns based on screen size, with a minimum width of 300px for each column */
+    gap: 20px; /* Space between grid items */
+    padding: 40px; /* Add padding for better spacing within the container */
+    background-color: #f0f0f0; /* Set a soft, light background color */
+    margin-top: 60px; /* Add top margin to bring the container down a bit */
+}
+  
+/* Individual Project Card */
+.project-card {
+    background: #2c3e50; /* Darker blue background for the card */
+    border-radius: 12px; /* Slightly rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add shadow to lift the card */
+    overflow: hidden; /* Prevent content from overflowing outside the card */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack the elements vertically */
+    justify-content: space-between; /* Distribute space between elements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover for both transform and shadow */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Make the shadow deeper on hover */
+}
+
+/* Project Image */
+.project-image {
+    width: 100%; /* Make the image span the full width of the card */
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-top-left-radius: 12px; /* Round the top-left corner of the image */
+    border-top-right-radius: 12px; /* Round the top-right corner of the image */
+}
+
+/* Project Title */
+.project-title {
+    text-align: center; /* Center-align the project title */
+    margin: 20px 0; /* Add top and bottom margin */
+    font-size: 1.6em; /* Increase font size */
+    font-weight: bold; /* Make the title bold */
+    color: #ecf0f1; /* Light text color for better contrast against dark background */
+}
+
+/* Project Info Section */
+.project-info-container {
+    flex-grow: 1; /* Allow this section to grow and take up available space */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    max-height: 160px; /* Limit the height to 160px */
+    padding: 15px; /* Add padding inside the info container */
+    border-top: 1px solid #34495e; /* Add a darker border at the top to match card color */
+    border-bottom: 1px solid #34495e; /* Add a border at the bottom */
+    background-color: #34495e; /* Darker background for the info section */
+    color: #ecf0f1; /* Light text color for contrast */
+}
+
+/* Project Description */
+.project-description {
+    font-size: 1em; /* Set font size */
+    margin-bottom: 12px; /* Add margin at the bottom of the description */
+    color: #bdc3c7; /* Lighter text color for readability */
+    line-height: 1.6; /* Increase line height for better readability */
+}
+
+/* Technologies Used - Removing the dots (bullets) */
+.project-tech {
+    font-size: 0.9em; /* Slightly smaller font size */
+    color: #fff; /* White text color */
+    background-color: #4caf50; /* Green background to make it stand out */
+    padding: 8px 15px; /* Add padding to create spacing inside the tech tags */
+    margin: 5px; /* Add margin between the tags */
+    border-radius: 20px; /* Round the corners to make it look like a button */
+    text-decoration: none; /* Remove underline from the text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+    display: inline-block; /* Ensure the tags display inline with each other */
+}
+
+.project-tech:hover {
+    background-color: #45a049; /* Darker green background when hovered */
+    transform: translateY(-3px); /* Lift the tag slightly on hover */
+}
+
+/* Optional: If you want the tech names to be displayed inline with some spacing */
+.project-tech:not(:last-child) {
+    margin-right: 10px; /* Add space between tech stack items */
+}
+
+/* Project Link Button */
+.project-link {
+    text-align: center; /* Center-align the link text */
+    background: #4caf50; /* Green background for the button */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline from the link */
+    padding: 12px; /* Add padding to make the button larger */
+    margin: 15px 20px; /* Add margin around the button */
+    border-radius: 5px; /* Round the button corners */
+    display: block; /* Make it block-level to take up the full width */
+    font-size: 1.1em; /* Increase the font size */
+    font-weight: bold; /* Make the button text bold */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-link:hover {
+    background: #45a049; /* Darker green when hovered */
+    transform: translateY(-3px); /* Lift the button slightly on hover */
+}
