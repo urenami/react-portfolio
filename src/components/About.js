@@ -111,7 +111,7 @@ const About = () => {
     <div className="about">
       {/* Header Section */}
       <div className="about-header">
-        <h1>About Me</h1>
+        <h1>ABOUT ME</h1>
         <div className="typing-container">
           <span className="typing-text">Michael - Full Stack Developer</span>
         </div>
