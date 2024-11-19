@@ -105,3 +105,19 @@
     background: #45a049; /* Darker green when hovered */
     transform: translateY(-3px); /* Lift the button slightly on hover */
 }
+
+/* Project Name Container */
+.project-name-container {
+    text-align: center; /* Center-align the project name */
+    margin-top: 40px; /* Add some space above the title */
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+/* Project Name */
+.project-name {
+    font-size: 2.5em; /* Set the size of the project name */
+    font-weight: bold; /* Make the text bold */
+    color: #2c3e50; /* Choose a color that contrasts well with the background */
+    text-transform: uppercase; /* Optional: Make the text all uppercase */
+    letter-spacing: 2px; /* Add some space between letters */
+}
